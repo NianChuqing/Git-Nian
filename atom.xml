@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Lao Nian</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-03-24T13:52:23.608Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dart学习笔记 (二)</title>
+    <link href="http://yoursite.com/2020/03/24/Dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/"/>
+    <id>http://yoursite.com/2020/03/24/Dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/</id>
+    <published>2020-03-24T12:50:23.000Z</published>
+    <updated>2020-03-24T13:52:23.608Z</updated>
+    
+    <content type="html"><![CDATA[<p>数组  字典  算术运算符  关系运算符  逻辑运算符  条件表达式  </p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;数组  字典  算术运算符  关系运算符  逻辑运算符  条件表达式  &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="http://yoursite.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dart学习笔记 (一)</title>
+    <link href="http://yoursite.com/2020/03/24/Dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/"/>
+    <id>http://yoursite.com/2020/03/24/Dart%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/</id>
+    <published>2020-03-24T08:55:58.000Z</published>
+    <updated>2020-03-24T13:51:06.209Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>古今中外有学问的人，有成就的人，总是十分注意积累的。知识就是机积累起来的，经验也是积累起来的。我们对什么事情都不应该像“过眼云烟”</p><p>​                                                                                                                                                                                <strong>邓拓</strong></p></blockquote><p><strong>入口  变量  常量</strong>  <strong>常用数据类型</strong>  <strong>字符串的拼接</strong>   <strong>布尔类型</strong></p><a id="more"></a><h1 id="Dart语言"><a href="#Dart语言" class="headerlink" title="Dart语言"></a>Dart语言</h1><ul><li>入口方法main</li></ul><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> main()&#123;   <span class="comment">//没有返回值的入口方法       </span></span><br><span class="line">        </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>  <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">main()&#123;   <span class="comment">//入口方法</span></span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ul><li><p>打印方法</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">'你好Hexo'</span>);   <span class="comment">//输出:你好Hexo</span></span><br></pre></td></tr></table></figure><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3></li><li><p>变量必须由<u><strong>数字</strong></u>,<strong><u>字母</u></strong>,<strong><u>下划线</u></strong>和<strong><u>美元符</u></strong>号组成  </p></li><li><p>标识符不能由<strong><u>数字</u></strong>开头  如错误示例:</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="number">123</span>str=<span class="number">123</span>;   <span class="comment">//错误示例</span></span><br></pre></td></tr></table></figure></li><li><p>标识符不能是<strong><u>保留字</u></strong> ,<u><strong>关键字</strong></u>  如错误示例:</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">int</span>=<span class="number">123</span>;   <span class="comment">//错误示例</span></span><br></pre></td></tr></table></figure></li><li><p>变量的名字是区分大小写的  如:<strong><u>age</u></strong>和<strong><u>Age</u></strong>应为两个不同的变量。在实际的运用中,也建议不要使用同一个。</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age=<span class="number">10</span>;   <span class="comment">//这是两个不同的变量</span></span><br><span class="line"><span class="keyword">var</span> Age=<span class="number">20</span>;</span><br></pre></td></tr></table></figure></li><li><p>标识符一定要见名思意,变量名称建议用名词,方法名称用动词。</p></li><li><p><strong><u>Var</u></strong>会自动判断变量类型,不能和<strong><u>String</u></strong>   <strong><u>int</u></strong>一起使用。</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数字类型不用带'引号',字符串类型须带上'引号',"双引号"和'单引号'效果一样,Dart有类型效验。</span></span><br><span class="line"><span class="keyword">var</span> str=<span class="string">'你好'</span>;   </span><br><span class="line"><span class="built_in">print</span>(str);   <span class="comment">//自动变量 打印出:你好</span></span><br><span class="line"><span class="keyword">var</span> <span class="built_in">num</span>=<span class="number">123</span>;</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">num</span>);   <span class="comment">//自动变量 打印出:123</span></span><br><span class="line">----------------------------------------</span><br><span class="line"><span class="built_in">String</span> str=<span class="string">'你好'</span>;</span><br><span class="line"><span class="built_in">print</span>(str);   <span class="comment">//字符串类型 打印出:你好</span></span><br><span class="line"><span class="built_in">int</span> <span class="built_in">num</span>=<span class="number">123</span>;</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">num</span>);   <span class="comment">//数字类型 打印出:123</span></span><br></pre></td></tr></table></figure></li></ul><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><ul><li><p>常量是不改变的量</p></li><li><p>变量可以修改,常量不可以修改</p></li><li><p><strong><u>const</u></strong>和<strong><u>final</u></strong>都是常量,但final更强大,const值不变一开始就要赋值;final可以开始不赋值,只能赋值一次,而且final不仅有const的<strong><u>编译时常量</u></strong>的特性,最重要的是它是<strong><u>运行时常量</u></strong>,<strong>惰性初始化</strong>,即在运行时第一次使用前才初始化 例如:</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a=<span class="number">3.1415926</span>;   <span class="comment">//编译时常量</span></span><br><span class="line"><span class="built_in">print</span>(a);   <span class="comment">//打印出:3.1415926</span></span><br></pre></td></tr></table></figure><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> a=<span class="keyword">new</span> <span class="built_in">DateTime</span>.now();   <span class="comment">//运行时常量</span></span><br><span class="line"><span class="built_in">print</span>(a);   <span class="comment">//打印出:2019.9.17. 14:37:54:722292</span></span><br></pre></td></tr></table></figure></li></ul><h3 id="常用数据类型"><a href="#常用数据类型" class="headerlink" title="常用数据类型"></a>常用数据类型</h3><ul><li><p><strong>Number</strong>(数值):</p><p>int:整数 整型        double:小数  浮点型</p></li><li><p><strong>String</strong>(字符串):</p><p>String:字符串</p></li><li><p><strong>Booleans</strong>(布尔):</p><p>bool:<strong>true</strong>对        <strong>false</strong>错</p></li><li><p><strong>List</strong>(数组):</p><p>list:数组,在Dart中,数组是列表对象,所以大多数人称为列表</p></li><li><p><strong>Map</strong>(字典):</p><p>map:字典</p></li><li><p>运算符中一旦有用double的数据,结果也会变成浮点型  如:</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="built_in">double</span> b=<span class="number">2</span>;</span><br><span class="line"><span class="built_in">print</span>(a+b);   <span class="comment">//输出:3.0</span></span><br></pre></td></tr></table></figure></li></ul><h3 id="字符串的拼接"><a href="#字符串的拼接" class="headerlink" title="字符串的拼接"></a>字符串的拼接</h3><ul><li><p>三对’引号’可写多层代码  如:</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span> str=<span class="string">'''123</span></span><br><span class="line"><span class="string">456</span></span><br><span class="line"><span class="string">    789'''</span>;</span><br><span class="line"><span class="built_in">print</span>(str);   <span class="comment">//输出:123</span></span><br><span class="line">                <span class="number">456</span></span><br><span class="line">                      <span class="number">789</span></span><br></pre></td></tr></table></figure></li><li><p>字符串的拼接  如:</p></li></ul><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">例<span class="number">1</span>:</span><br><span class="line"><span class="built_in">String</span> str1=<span class="string">'你好'</span>;</span><br><span class="line"><span class="built_in">String</span> str2=<span class="string">'Dart'</span>;</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'<span class="subst">$str1</span><span class="subst">$str2</span>'</span>);   <span class="comment">//输出:你好Dart</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'<span class="subst">$str1</span>  <span class="subst">$str2</span>'</span>);   <span class="comment">//输出:你好  Dart</span></span><br><span class="line"><span class="built_in">print</span>(str1+str2);   <span class="comment">//输出:你好Dart</span></span><br><span class="line"><span class="built_in">print</span>(str1 + str2);   <span class="comment">//输出:你好Dart</span></span><br><span class="line"><span class="built_in">print</span>(str1+<span class="string">' '</span>+str2);   <span class="comment">//输出:你好 Dart</span></span><br></pre></td></tr></table></figure><h3 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h3><ul><li><p>布尔类型是条件判断语句</p><p>使用if…else和true  false做判断:</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">例<span class="number">1</span>:</span><br><span class="line"><span class="keyword">var</span> dan=<span class="keyword">false</span>;   <span class="comment">//定义dan为false</span></span><br><span class="line"><span class="keyword">if</span>(dan)&#123;   <span class="comment">//如果dan为true</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'真'</span>);  </span><br><span class="line">&#125;<span class="keyword">else</span>&#123;   <span class="comment">//否则</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'假'</span>);</span><br><span class="line">&#125;   <span class="comment">//输出:假</span></span><br><span class="line">例<span class="number">2</span>:</span><br><span class="line"><span class="built_in">int</span> a=<span class="number">12</span>;</span><br><span class="line"><span class="built_in">double</span> b=<span class="number">13</span>;</span><br><span class="line"><span class="keyword">if</span>(a==b)&#123;   <span class="comment">//假如a=b</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'a=b'</span>);   </span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'a!=b'</span>);</span><br><span class="line">&#125;   <span class="comment">//输出:a!=b (a不等于b)</span></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;古今中外有学问的人，有成就的人，总是十分注意积累的。知识就是机积累起来的，经验也是积累起来的。我们对什么事情都不应该像“过眼云烟”&lt;/p&gt;
+&lt;p&gt;​                                                                                                                                                                                &lt;strong&gt;邓拓&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;入口  变量  常量&lt;/strong&gt;  &lt;strong&gt;常用数据类型&lt;/strong&gt;  &lt;strong&gt;字符串的拼接&lt;/strong&gt;   &lt;strong&gt;布尔类型&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="http://yoursite.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NewDay 新的开始</title>
+    <link href="http://yoursite.com/2020/03/23/newpapername/"/>
+    <id>http://yoursite.com/2020/03/23/newpapername/</id>
+    <published>2020-03-23T11:28:18.000Z</published>
+    <updated>2020-03-23T16:49:28.895Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到我的博客 我正在努力客制化中~</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;欢迎来到我的博客 我正在努力客制化中~&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2020/03/23/hello-world/"/>
+    <id>http://yoursite.com/2020/03/23/hello-world/</id>
+    <published>2020-03-23T09:24:08.531Z</published>
+    <updated>2020-03-23T09:24:08.531Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
